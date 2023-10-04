@@ -1,0 +1,29 @@
+
+<h2>Liste des réservations client</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Nombre de couvert</th>
+            <th>Nom du client</th>
+            <th>Telephone</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        <?php foreach($bookings as $booking) : ?>
+            <tr>
+                <td><?= $booking['date'] ?></td>
+                <td><?= $booking['nbrPeople'] ?></td>
+                <td><?= $booking['nom']." ".$booking['prenom'] ?></td>
+                <td><?= $booking['telephone'] ?></td>
+                <td><?= $booking['email'] ?></td>
+            </tr>
+        <?php endforeach ;?>
+
+    </tbody>
+
+</table>

@@ -1,0 +1,493 @@
+/*
+ * Styles des éléments HTML
+ */
+:root
+{
+    --black3:#212529;
+    --black2:#343a40;
+    --black1:#495057;
+    --grey3:#6c757d;
+    --grey2:#adb5bd;
+    --grey1:#ced4da;
+    --white3:#dee2e6;
+    --white2:#e9ecef;
+    --white1:#f8f9fa;
+    --red:#EF4036;
+    --black1opacity:rgba(73, 80, 87,0.4);
+}
+
+*
+{
+    box-sizing: border-box;
+    margin: 0px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 1.5rem;
+}
+
+html{
+    font-size:62.5%;
+}
+
+.title
+{
+    font-size: 8rem;
+    color: var(--white1);
+    margin: 10px;
+    font-family: 'Staatliches', cursive; 
+    background: rgb(255, 255, 255,0.10); 
+    width: 100%;
+    text-align: center;
+    opacity:0.8;
+}
+
+h1,h2,h3,h4, nav a {
+    font-family: 'Staatliches', cursive;    
+}
+
+h2
+{
+    text-align: center;
+    margin: 30px 0px;
+    font-size: 5rem;
+    
+}
+
+a 
+{
+    text-decoration: none;
+}
+
+header nav 
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: var(--black1opacity);
+    padding: 3rem;
+    width: 100%;
+}
+
+header nav a{
+    color: var(--white2);
+    font-size : 3rem;
+    text-shadow: 12px 7px 6px rgba(0,0,0,0.24);
+    transition: transform 1s, text-shadow 0.5s;
+}
+
+header nav a:hover 
+{
+    transform: translateY(1rem) scale(1.2);
+    text-shadow: 3px 8px 0px rgba(0,0,0,0.26);
+}
+
+#side 
+{
+    background: url("../images/porsche.gif");
+    background-size: cover;
+    background-position:80%;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.message {
+    padding: 10px;
+    text-align: center;
+    background-color: var(--red);
+    color: white;
+    font-size: 2rem;
+}
+
+main img 
+{
+    max-width: 50rem;
+    max-height: fit-content;
+    border-radius:10px;
+}
+
+.flexContainer
+{
+    margin-top:2rem;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:space-evenly;
+}
+
+.container{
+    width:40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    height: fit-content;
+}
+
+.container h3 
+{
+   font-size: 4rem; 
+}
+
+
+.imageVoiture {
+    margin:2rem;
+}
+
+.price {
+    margin:10px;
+    font-size:15px;
+    font-weight: bold;
+}
+
+
+
+.footer_black {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px 0;
+    background: var(--black1);
+    color: var(--white1);
+    text-shadow: 0.5px 0.5px 1px black;
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    overflow: hidden;
+}
+
+.top_footer, .mid_footer, .bot_footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.social_footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;    
+}
+
+
+.mid_footer a {
+    text-decoration: none;
+    color: var(--white1);
+}
+
+.mid_footer a:hover {
+    text-decoration: underline var(--white1);
+}
+
+
+.bot_footer a {
+    text-decoration: none;
+    color: var(--white1);
+}
+
+.bot_footer a:hover {
+    text-decoration: underline var(--white1);
+}
+
+.fa-brands
+{
+    color: var(--white2);
+    font-size: 3rem;
+}
+
+.generic-form 
+{
+    width:60%;
+    margin:auto;
+}
+
+label{
+    display:inline-block;
+    width:20%;
+    font-size: 2rem;
+    margin-left: 2rem;
+}
+
+.generic-form input:not([type="submit"]),
+.generic-form select {
+    margin: 2rem 0;
+    padding: 2rem 4rem;
+    background-color: var(--grey3); 
+    width: 60%;
+    border-radius: 2rem;
+    border: none;
+    color:var(--white1);
+    font-size:1.8rem
+  }
+ 
+
+.generic-form fieldset{
+    border:1px solid var(--grey3);
+    border-radius:2rem;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-evenly;
+    padding:2rem;
+}
+
+.generic-form legend{
+    font-size: 3rem;
+}
+
+.btnSubmit{
+    width: fit-content;
+    margin:2rem 2rem;
+    padding: 10px 7px;
+    background-color:var(--black1);
+    transition:background-color 0.5s, border 0.5s;
+    border-radius:2rem;
+    color: var(--white1);
+    border: none;
+}
+
+.btnSubmit:hover{
+    background-color:rgba(0, 128, 0, 0.486);
+}
+
+.btnCancel{
+    width: fit-content;
+    padding: 10px 7px;
+    margin:2rem 2rem;
+    background-color: var(--red);
+    transition:background-color 0.5s;
+    color: var(--white1);
+    border-radius:3rem;
+    border: none;
+}
+
+.centrelol{
+    width: 100%;
+    margin:auto;
+    display:flex;
+    justify-content:center;
+}
+
+.btnCancel a {
+    color: var(--white1);
+    font-size:2.5rem;
+    font-weight: bold;
+    
+}
+
+.btnCancel:hover {
+    background-color: rgba(143, 49, 49, 0.486) ;
+}
+
+.generic-form button:hover{
+    background-color:var(--black1opacity);
+}
+
+.mainTitle{
+    color:var(--black1);
+    font-size:5rem;
+    text-align: center;
+}
+
+.mainTitle i {
+    font-size:2rem;
+}
+
+#confirm {
+    margin: 20px;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    border: 2px solid #333;
+    margin: 5rem auto;
+}
+
+thead {
+    background-color: #333;
+    color: white;
+}
+
+
+th.headTable {
+    padding: 10px;
+    text-align: left;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+td a {
+    color: white;
+}
+
+tfoot {
+    background-color: #333;
+    color: white;
+}
+
+td.priceTotal {
+    padding: 10px;
+    text-align: right;
+    width:25%;
+}
+
+td.headTable a {
+    color: #FF5733;
+    text-decoration: none;
+}
+
+td.headTable a:hover {
+    text-decoration: underline;
+}
+
+
+.deleteButton {
+	box-shadow: 3px 4px 0px 0px #8a2a21;
+	background:linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
+	background-color:#c62d1f;
+	border-radius:18px;
+	border:1px solid #d02718;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:7px 25px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #810e05;
+}
+.deleteButton:hover {
+	background:linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
+	background-color:#f24437;
+}
+.deleteButton:active {
+	position:relative;
+	top:1px;
+}
+
+.btnAddOrder {
+	box-shadow: 3px 4px 0px 0px #3dc21b;
+	background:linear-gradient(to bottom, #44c767 5%, #5cbf2a 100%);
+	background-color:#44c767;
+	border-radius:18px;
+	border:1px solid #18ab29;
+	display:block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:7px 25px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+    width:fit-content;
+    margin: 2rem auto;
+}
+
+.btnAddOrder:hover {
+	background:linear-gradient(to bottom, #5cbf2a 5%, #44c767 100%);
+	background-color:#5cbf2a;
+}
+.btnAddOrder:active {
+	position:relative;
+	top:1px;
+}
+
+#target {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:50%;
+    margin:5rem auto;
+}
+
+.marge{
+    margin:5rem auto;
+}
+
+.centrelol input{
+    font-size:1.6rem;
+    font:normal bold 26px/1 "Open Sans", sans-serif;
+    background-color:var(--grey2);
+    text-align:center;
+    color:var(--white1);
+    border:none;
+    border-radius: 4rem;
+}
+
+#ajouter {
+    background:    #a0c4cb;
+    border-radius: 4rem;
+    padding:       10px 30px;
+    color:         #ffffff;
+    display:       inline-block;
+    font:          normal bold 26px/1 "Open Sans", sans-serif;
+    text-align:    center;
+    border: none;
+    margin:0 1rem
+}
+
+#homeAdmin {
+   display: flex; 
+   flex-direction: row;
+   justify-content: space-evenly;
+   align-items: center;
+}
+
+.btnAdmin {
+    box-shadow: 3px 4px 0px 0px #373836;
+	background:linear-gradient(to bottom, #5b5d5b 5%, #656764 100%);
+	background-color:#2e312f;
+	border-radius:18px;
+	border:1px solid #262d27;
+	display:block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:7px 25px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #232922;
+    width:fit-content;
+    margin: 5rem auto;
+}    
+
+.btnAdmin:hover {
+	background:linear-gradient(to bottom, #3c3d3b 5%, #656966 100%);
+	background-color:#252724;
+}
+
+.btnAdmin:active {
+	position:relative;
+	top:1px;
+}
+
+.pascontent a {
+    color: var(--black3);
+    cursor: pointer;
+}
+
+#tableHide {
+    display: none;
+}
+
+.notStolenPicture {
+    height: 80px;
+    width: 75px;
+    position: absolute;
+    top: 1rem;
+    left: 4rem;
+}

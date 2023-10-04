@@ -1,0 +1,26 @@
+<main>
+            <h2><i class="fas fa-plus-square"></i> Modifier un produit alimentaire </h2>
+    
+    <form method="POST" class="generic-form" action="index.php?action=formModifMeal" enctype="multipart/form-data">
+        <input type="hidden" name="idMeal" value="<?= $meal['product_id'] ?>">
+        <fieldset class="authentification ">
+        <legend><i class="fas fa-check"></i> Caractéristiques</legend>
+        <p><label>Nom: </label><input type="text" name="ajout_nom" value="<?= $meal['productName'] ?>"></p>
+        <p><label>Description: </label><textarea name="description"><?= $meal['productDesc'] ?></textarea></p>
+        <p><label>Photo: </label><input type="file" name="photo"></p>
+                <!-- Photo normal si l'admin ne selectionne pas de photo-->
+        <input type="hidden" name="currentpic" value="<?= $meal['productPicture'] ?>"> 
+        </fieldset>
+        
+        <fieldset class="authentification " id="Approvisionnement">
+        <legend><i class="fas fa-retweet"></i> Approvisionnement</legend>
+        <label>Prix de vente: </label><input type="text" name="prix_vente" value="<?= $meal['productPrice'] ?>"> €
+        </fieldset>
+
+        <div class="centrelol">
+                <input type="submit" name="submit" value="Modifier" class="btnSubmit" id="ajout_produit">
+		<button class="btnCancel"><a href="index.php?action=modifMeal">Annuler</button></a>
+	</div>
+    </form>
+    
+    </main>

@@ -1,0 +1,48 @@
+
+        <!-- insertion de message si existant -->
+                
+                
+        <!-- Affichage du template lié à la vue -->
+        <h2 class="mainTitle">Se connecter avec un compte utilisateur</h2>
+
+		<?php if(isset($errors)) : ?>
+			<div class="error">
+				<?php foreach($errors as $error) : ?>
+					<p><?= $error ?></p>
+				<?php endforeach; ?>
+			</div>
+		<?php endif; ?>
+
+<form class="generic-form" action="index.php?action=connexion" method="POST">
+
+	<fieldset>
+		<legend>Informations d'authentification</legend>
+
+				<div class="row">
+					<label for="email">E-mail :</label>
+					<input id="email" type="text" name="email" data-required="" data-name="E-mail">
+				</div>
+
+				<div class="row">
+					<label for="password">Mot de passe :</label>
+					<input id="password" type="password" name="password" data-required="" data-name="Mot de passe">
+				</div>
+
+
+	</fieldset>
+
+					<div class="centrelol">
+						<input class="btnSubmit" name="submit" type="submit" value="Connexion" id="connexion">
+						<button class="btnCancel"><a class="button button-cancel small" href="index.php">Annuler</a></button>
+					</div>
+
+
+</form>
+
+        <div id="side">
+            <p class="title">Connexion</p>
+        </div>
+<!--<script type="text/javascript" src="views/js/connexion.js"></script>-->
+
+
+

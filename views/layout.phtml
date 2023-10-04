@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Location voiture de Luxe</title>
+
+    <link rel="stylesheet" href="public/css/3wa-resto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="index.php?action=home"><img class="notStolenPicture" src="public/images/logopasvole.png" alt=""></a>
+<?php if(isset($_GET['action']) && $_GET['action'] == "home" || !isset($_GET['action']) ): ?>
+    <div id="side">
+<?php endif; ?>
+        <nav>
+            <?php if(!$this -> isConnect() && !$this -> isConnectAdmin()) : ?>
+
+
+            <a  href="index.php?action=createAccount">Créer un compte</a>
+
+            <a  href="index.php?action=connexion">Connexion</a>
+
+
+            <?php elseif ($this -> isConnectAdmin()) : ?>
+
+                    <a class="button button-primary" href="index.php?action=admin">Panneau Administrateur</a>
+
+
+                    <a class="button button-primary" href="index.php?action=deconnexion">Déconnexion</a>
+            <?php else: ?>        
+
+                    <a class="button button-primary" href="index.php?action=booking">Date réservation</a>
+
+                    <a class="button button-primary" href="index.php?action=deconnexion">Déconnexion</a>
+            <?php endif ; ?>
+        </nav>
+        <?php if(isset($_GET['action']) && $_GET['action'] == "home" || !isset($_GET['action']) ): ?>
+        <p class="title">Enjoy speed and luxury now</p>
+    </div>
+<?php endif; ?>
+        
+    </header>
+
+    <main>
+
+
+        <?php if(isset($_GET['message'])): ?>
+            <p class="message"><?= $_GET['message'] ?></p>
+        <?php endif; ?>
+        <?php require $template.".phtml"; ?> 
+    </main>
+    <!-- Pied de page commun -->
+    
+    <footer>
+
+<div class="footer_black">
+    
+<div class="top_footer">
+        <p>Copyright © 2023 RYDC</p>
+        <p>Rent Your Dream Car</p>
+    </div>
+
+    <div class="mid_footer">
+        <a href="mentionslegales">Privacy Policy</a>
+        <a href="sitemap.php"> Site map</a>
+    </div>
+
+    <div class="social_footer">
+        <a href="">
+            <i class="fa-brands fa-discord"></i>
+        </a>
+        <a href="">
+            <i class="fa-brands fa-twitter"></i>
+        </a>
+    </div>
+
+    <div class="bot_footer">
+        <p>Made by :  <a href="">Emma M./Thibault B.</a></p>      
+        <p>Made by :  <a href="">Lucas P.</a></p>   
+    </div>
+</div>
+</footer>
+
+    <!-- Code principal JavaScript de l'application -->
+</body>
+</html>
+                
+                
+                
+                
+                
+                
+                
+                

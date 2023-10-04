@@ -1,0 +1,31 @@
+
+<h2>Liste des réservations client</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Commande ID</th>
+            <th>Date</th>
+            <th>Statut</th>
+            <th>Total</th>
+            <th>Nom</th>
+            <th>Prénom</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        <?php foreach($orders as $order) : ?>
+            <tr>
+                <td class="pascontent"><a href="index.php?action=listOrderDetails&orderId=<?= $order['order_id'] ?>"><?= $order['order_id'] ?></a></td>
+                <td><?= $order['orderDate'] ?></td>
+                <td><?= $order['status'] ?></td>
+                <td><?= $order['total'] ?></td>
+                <td><?= $order['nom'] ?></td>
+                <td><?= $order['prenom'] ?></td>
+            </tr>
+        <?php endforeach ;?>
+
+    </tbody>
+
+</table>

@@ -1,0 +1,15 @@
+<div class="flexContainer">
+    <?php foreach($meals as $meal) : ?>
+
+        <div class="container">
+            <h3><?= $meal['productName'] ?></h3>
+            <?php if(empty($meal['productPicture'])) : ?>
+                <img src="public/images/upload/no-photo.png">
+            <?php else: ?>
+                <img  class="imageVoiture" src="public/images/upload/<?= $meal['productPicture'] ?>">
+            <?php endif; ?>
+            <p><?= $meal['productDesc'] ?></p><br>
+            <p class="price">Prix : <?= $meal['productPrice'] ?>€/heure</p>
+        </div>
+    <?php endforeach; ?>
+</div>

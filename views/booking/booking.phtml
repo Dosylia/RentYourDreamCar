@@ -1,0 +1,56 @@
+
+        <!-- insertion de message si existant -->
+                
+                
+        <!-- Affichage du template lié à la vue -->
+        
+  <h2></i> Réservation d'une voiture</h2>
+  <form method="POST" action="index.php?action=booking" id="form_resa" class="generic-form">
+    <fieldset class="authentification">
+      <legend>Informations</legend>
+        <div class="row">
+          <label for="dateResa">Date de réservation: </label>
+          <input name="dateResa" type="date" id="dateResa" value="" min="">
+        </div>
+
+        <div class="row">
+          <label for="bookingHour">à partir:</label>
+            <select name="bookingHour" id="bookingHour">
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                          <option value="11">11</option>
+                          <option value="12">12</option>
+                          <option value="14">14</option>
+                          <option value="15">15</option>
+                          <option value="16">16</option>
+            </select>
+          </div>
+
+        <div class="row">    
+          <label for="bookingMin">Minute:</label>      
+          <select name="bookingMin" id="bookingMin">
+            <option value="00">00</option>
+            <option value="15">15</option>
+            <option value="30">30</option>
+            <option value="45">45</option>
+          </select>
+        </div>
+
+        <div class="row">           
+          <label for="nbCouverts">Durée (en heure): </label>
+          <input type="number" name="nbCouverts" min="1" max="35" value="1">
+        </div>
+    </fieldset>
+    
+    <div class="centrelol">
+      <input type="submit" name="submit" value="Réserver" class="btnSubmit">
+      <button class="btnCancel"><a href="../index.php" class="cancel">Annuler</a></button>
+  </div>
+  </form>
+
+  <div id="side">
+            <p class="title">Parce que la qualité n'a pas de prix</p>
+        </div>
+
+  <script type="text/javascript" src="public/js/booking.js"></script>

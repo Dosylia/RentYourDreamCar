@@ -1,0 +1,29 @@
+
+        <table>
+    <thead>
+        <tr>
+            <th>Photo</th>
+            <th>Nom</th>
+            <th>Description</th>
+            <th>Prix</th>
+            <th>Modifier/Supprimer</th>
+
+        </tr>
+    </thead>
+    <tbody>
+    <?php foreach($meals as $meal) : ?>
+                    <tr>
+                <td><?php if(empty($meal['productPicture'])) : ?>
+                        <img src="public/images/meals/no-photo.png">
+                    <?php else: ?>
+                        <img src="public/images/upload/<?= $meal['productPicture'] ?>">
+                    <?php endif; ?></td>
+                <td>Nom : <?=$meal['productName'] ?></td>
+                <td>Desc : <?=$meal['productDesc'] ?></td>
+                <td> Prix : <?=$meal['productPrice'] ?></td>
+                <td class="btnAddOrder"><a href="index.php?action=modifMeal&amp;idMeal=<?=$meal['product_id'] ?>">modifier</a></td>
+                <td class="deleteButton"><a href="index.php?action=suppMeal&amp;idMeal=<?=$meal['product_id'] ?>">supprimer</a></td>
+            </tr>
+            <?php endforeach; ?>
+            </tbody>
+</table>

@@ -1,0 +1,54 @@
+
+<h2>Pour la commande :</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Commande ID</th>
+            <th>Date</th>
+            <th>Statut</th>
+            <th>Total</th>
+            <th>Nom</th>
+            <th>Prénom</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        
+        <tr>
+            <td><?= $orders['order_id'] ?></td>
+            <td><?= $orders['orderDate'] ?></td>
+            <td><?= $orders['status'] ?></td>
+            <td><?= $orders['total'] ?></td>
+            <td><?= $orders['nom'] ?></td>
+            <td><?= $orders['prenom'] ?></td>
+        </tr>
+        
+
+    </tbody>
+
+</table>
+
+<h2>Détail</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Nom du produit</th>
+            <th>Quantité</th>
+            <th>Prix</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach($orderDetails as $orderDetail) : ?>
+            <tr>
+                <td class="pascontent"><?= $orderDetail['productName'] ?></td>
+                <td><?= $orderDetail['quantity'] ?></td>
+                <td><?= $orderDetail['priceEach'] ?></td>
+            </tr>
+        <?php endforeach ;?>
+
+    </tbody>
+
+</table>

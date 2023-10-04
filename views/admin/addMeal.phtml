@@ -1,0 +1,22 @@
+
+        <h2>Ajout d'un produit alimentaire au catalogue</h2>
+
+<form class="generic-form" method="POST" action="index.php?action=addMeal" enctype="multipart/form-data">
+	<fieldset class="authentification ">
+		<legend><i class="fas fa-check"></i> Caractéristiques</legend>
+		<p><label>Nom: </label><input type="text" name="ajout_nom"></p>
+		<p><label>Description: </label><textarea name="description"></textarea></p>
+		<p><label>Photo: </label><input type="file" name="photo"></p>
+	</fieldset>
+
+	<fieldset class="authentification " id="Approvisionnement">
+		<legend><i class="fas fa-retweet"></i> Approvisionnement</legend>
+		<label>Prix de vente à l'heure: </label><input type="text" name="prix_vente">
+	</fieldset>
+
+	<div class="centrelol">
+		<input type="submit" name="submit" value="Ajouter" class="btnSubmit" id="ajout_produit">
+		<button class="btnCancel"><a href="index.php?action=admin">Annuler</button></a>
+	</div>
+
+</form>

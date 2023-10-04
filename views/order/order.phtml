@@ -1,0 +1,65 @@
+
+        
+<h3 class="mainTitle marge">Passer une commande </h3>
+<div class="centrelol marge">
+    <label for="choice">Choisissez un item:</label>
+    <select id="choice" name="choice">
+        <option value="" disabled selected>...</option>
+        <?php foreach($orders as $order) : ?>
+                <option value="<?= $order['product_id'] ?>"><?= $order['productName'] ?></option>
+        <?php endforeach ; ?>
+    </select>
+
+    <span id="errorSelect"></span>
+</div>
+
+
+<div id="target">
+    <img id="img"src="" class="marge">
+    <p id="desc"></p>
+    <small id="price"></small>
+</div>
+
+<div class="centrelol marge">
+    <input type="hidden" id="userId" value="<?= $_SESSION['user'] ?>">
+
+    <input type="number" id="quantite" min="1" value="1" max="30">
+
+    <button type="button" id="ajouter">Ajouter</button>
+</div>
+
+<hr>
+
+<div id="confirm">
+    <table id="tableHide">
+        <thead>
+            <tr>
+                <th class="headTable">Nom produit</th>
+                <th class="headTable">Prix unitaire</th>
+                <th class="headTable">Quantité</th>
+                <th class="headTable">Sous total</th>
+                <th class="headTable">Supprimer</th>
+            </tr>
+        </thead>
+        <tbody id="displayCart"></tbody>
+        <tfoot id="total">
+            <tr>
+                <td class="priceTotal"></td>
+                <td class="priceTotal"></td>
+                <td class="priceTotal"></td>
+                <td class="priceTotal"> le prix total : <span id="totalPrice"></span> </td>
+                <td class="priceTotal"></td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+
+<input type="button" name="order" class="btnAddOrder" id="valider" value="Valider votre commande">
+
+<div id="side">
+            <p class="title">Sélectionnez votre modèle</p>
+        </div>
+
+<script type="module" src="public/js/script.js"></script>
+
+
